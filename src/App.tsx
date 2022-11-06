@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.scss";
-import Dropdown from "./components/dropdown/Dropdown";
+import Dropdown from "./components/dropdown";
+import Accordion from "./components/accordion/Accordion";
+import { AccordionItems } from "./types/Accordion";
 
 function App() {
   const [componentName, setComponentName] = useState("");
   const componentsNames: Array<string> = ["none", "accordion"];
+  const accordionItems: AccordionItems = [{ title: "Title", children: <></> }];
+
+  const renderBodyContent = useCallback(() => {
+    switch (componentName) {
+      case "none":
+        return <></>;
+      case "accordion":
+        return <Accordion accordionItems={accordionItems} />;
+    }
+  }, [componentName]);
 
   return (
     <div className="app__container min-w-full min-h-full">
@@ -21,7 +33,7 @@ function App() {
           <Dropdown selected={componentName} setItems={setComponentName} items={componentsNames} />
         </div>
       </div>
-      <div className="app__body min-w-full"></div>
+      <div className="app__body min-w-full">{renderBodyContent()}</div>
     </div>
   );
 }
