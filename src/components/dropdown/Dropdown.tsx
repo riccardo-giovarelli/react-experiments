@@ -1,12 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-
-type DropdownProps = {
-  selected: string;
-  items: Array<string>;
-  setItems: Function;
-};
+import { DropdownProps } from "../../types/type-dropdown";
 
 const Dropdown = ({ items, selected, setItems }: DropdownProps) => {
   return (
@@ -28,7 +23,7 @@ const Dropdown = ({ items, selected, setItems }: DropdownProps) => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          {items ? (
+          {items &&
             items.map((item: string, index: number) => (
               <div key={index}>
                 <Menu.Item>
@@ -46,10 +41,7 @@ const Dropdown = ({ items, selected, setItems }: DropdownProps) => {
                   </button>
                 </Menu.Item>
               </div>
-            ))
-          ) : (
-            <></>
-          )}
+            ))}
         </Menu.Items>
       </Transition>
     </Menu>

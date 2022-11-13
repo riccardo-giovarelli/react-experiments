@@ -1,0 +1,28 @@
+.accordionitem__container {
+  .accordionitem__header {
+    .accordionitem__header-button-container {
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+
+      cursor: pointer;
+
+      &--open {
+        transform: rotate(0deg);
+      }
+      &--close {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .accordionitem__body {
+    &--open {
+      height: 300px;
+    }
+
+    &--close {
+      height: 0px;
+    }
+  }
+}

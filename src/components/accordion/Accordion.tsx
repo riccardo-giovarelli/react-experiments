@@ -1,12 +1,13 @@
-import React from "react";
-import { AccordionItems } from "../../types/Accordion";
+import { AccordionPropsType } from "../../types/type-accordion";
+import AccordionItem from "./AccordionItem";
 
-type AccordionProps = {
-  accordionItems: AccordionItems;
-};
-
-const Accordion = ({ accordionItems }: AccordionProps) => {
-  return <></>;
+const Accordion = ({ accordionItems }: AccordionPropsType) => {
+  return (
+    <div className="accordion__container w-full">
+      {accordionItems &&
+        accordionItems.map((item, index) => <AccordionItem key={index} data={item} />)}
+    </div>
+  );
 };
 
 export default Accordion;
