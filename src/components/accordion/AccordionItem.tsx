@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AccordionItemPropsType } from "../../types/type-accordion";
+import { AccordionItemPropsType } from "../../interface/interface-accordion";
 import "./AccordionItem.scss";
 
 const AccordionItem = ({ data, defaultStatus = false }: AccordionItemPropsType) => {

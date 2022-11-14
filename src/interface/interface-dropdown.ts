@@ -1,7 +1,7 @@
 /**
- * @description DropdownProps custom type
+ * @description Interface for props of Dropdown
  */
-export type DropdownProps = {
+export interface DropdownProps  {
     selected: string;
     items: Array<string>;
     setItems: Function;
