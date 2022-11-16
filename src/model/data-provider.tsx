@@ -8,7 +8,7 @@ import { AccordionItemsType } from "../interface/interface-accordion";
  */
 export const getAccordionItems = (): AccordionItemsType => [
   {
-    title: "Chuck Norris facts",
+    title: "chuck norris facts",
     children: (
       <ul>
         <li>
@@ -26,7 +26,7 @@ export const getAccordionItems = (): AccordionItemsType => [
     ),
   },
   {
-    title: "Bologna",
+    title: "bologna",
     children: (
       <p>
         Bologna è un comune italiano di 391 810 abitanti, capoluogo dell'omonima città
@@ -39,7 +39,7 @@ export const getAccordionItems = (): AccordionItemsType => [
     ),
   },
   {
-    title: "Lorem ipsum dolor sit amet",
+    title: "lorem ipsum dolor sit amet",
     children: (
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus, lorem id rutrum

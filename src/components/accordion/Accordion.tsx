@@ -1,5 +1,5 @@
 import { AccordionPropsType } from "../../interface/interface-accordion";
-import AccordionItem from "./AccordionItem";
+import AccordionItem from "../accordion-item/AccordionItem";
 
 const Accordion = ({ accordionItems }: AccordionPropsType) => {
   return (

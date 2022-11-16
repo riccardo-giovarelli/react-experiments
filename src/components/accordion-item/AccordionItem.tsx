@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AccordionItemPropsType } from "../../interface/interface-accordion";
+import { capitalizeAllWords } from "./lib";
 import "./AccordionItem.scss";
 
 const AccordionItem = ({ data, defaultStatus = false }: AccordionItemPropsType) => {
@@ -18,11 +19,11 @@ const AccordionItem = ({ data, defaultStatus = false }: AccordionItemPropsType) 
       >
         <div
           className={
-            "accordionitem__header-title grow text-xl truncate uppercase " +
+            "accordionitem__header-title grow text-xl truncate " +
             (isOpen ? "text-slate-100" : "text-slate-600")
           }
         >
-          {data.title}
+          {capitalizeAllWords(data.title)}
         </div>
         <div className="accordionitem__header-button-container accordionitem__header-button-container">
           <span
