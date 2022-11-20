@@ -1,4 +1,4 @@
-import { AccordionItemsType } from "../interface/interface-accordion";
+import { AccordionItemsType } from "../interfaces/interface-accordion";
 
 /**
  * @function getAccordionItems

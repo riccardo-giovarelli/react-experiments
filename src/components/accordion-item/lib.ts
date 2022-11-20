@@ -1,10 +1,10 @@
 /**
  * @function capitalizeAllWords
  *
- * @param {String} string String to capitalize
- * @returns {String} String capitalized
+ * @param {string} string String to capitalize
+ * @returns {string} String capitalized
  */
-export const capitalizeAllWords = (string: String): String =>
+export const capitalizeAllWords = (string: string): string =>
   string
     .split(" ")
     .map((word) => word[0].toUpperCase() + word.substring(1))
