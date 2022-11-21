@@ -1,4 +1,5 @@
 /**
+ * @interface DropdownProps
  * @description Interface for props of Dropdown
  */
 export interface DropdownProps {

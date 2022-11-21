@@ -1,4 +1,4 @@
-import { AccordionItemsType } from "../interfaces/interface-accordion";
+import { AccordionItemType } from "../interfaces/interface-accordion";
 
 /**
  * @function getAccordionItems
@@ -6,7 +6,7 @@ import { AccordionItemsType } from "../interfaces/interface-accordion";
  * @description Return a set of accordion items
  * @returns {AccordionItems} Accordion items
  */
-export const getAccordionItems = (): AccordionItemsType => [
+export const getAccordionItems = (): Array<AccordionItemType> => [
   {
     title: "chuck norris facts",
     children: (

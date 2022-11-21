@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 
 /**
- * @description Interface for accordion item
+ * @interface AccordionItemType
+ * @description Interface for ACCORDION ITEM
  */
 export interface AccordionItemType {
   title: string;
@@ -9,19 +10,16 @@ export interface AccordionItemType {
 }
 
 /**
- * @description Interface accordion items
- */
-export interface AccordionItemsType extends Array<AccordionItemType> {}
-
-/**
- * @description Interface for the props of Accordion component
+ * @interface AccordionPropsType
+ * @description Interface for the PROPS OF THE ACCORDION COMPONENT
  */
 export interface AccordionPropsType {
-  accordionItems: AccordionItemsType | null;
+  accordionItems: Array<AccordionItemType> | null;
 }
 
 /**
- * @description Interface for the props of Accordion items component
+ * @interface AccordionItemPropsType
+ * @description Interface for the PROPS OF THE ACCORDION ITEMS COMPONENT
  */
 export interface AccordionItemPropsType {
   data: AccordionItemType;
