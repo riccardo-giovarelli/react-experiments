@@ -1,3 +1,8 @@
+// Variables
+$startDegree: 0deg;
+$endDegree: $startDegree + 180deg;
+
+// Style
 .accordionitem__container {
   .accordionitem__header {
     cursor: pointer;
@@ -5,15 +10,15 @@
     .accordionitem__header-button-container {
       .accordionitem__header-button {
         transition-property: transform;
-        transition-duration: 0.3s;
+        transition-duration: 0.4s;
         transition-timing-function: ease-out;
         font-size: 30px;
 
         &--open {
-          transform: rotate(0deg);
+          transform: rotate($startDegree);
         }
         &--close {
-          transform: rotate(180deg);
+          transform: rotate($endDegree);
         }
       }
     }
