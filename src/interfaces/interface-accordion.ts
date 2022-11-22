@@ -5,8 +5,12 @@ import { ReactNode } from "react";
  * @description Interface for ACCORDION ITEM
  */
 export interface AccordionItemType {
-  title: string;
-  children: ReactNode;
+  readonly title: string;
+  readonly children: ReactNode;
+}
+
+export interface AccordionItemExtType extends AccordionItemType {
+  visible: boolean;
 }
 
 /**
@@ -14,7 +18,7 @@ export interface AccordionItemType {
  * @description Interface for the PROPS OF THE ACCORDION COMPONENT
  */
 export interface AccordionPropsType {
-  accordionItems: Array<AccordionItemType> | null;
+  accordionItems: Array<AccordionItemExtType> | null;
 }
 
 /**

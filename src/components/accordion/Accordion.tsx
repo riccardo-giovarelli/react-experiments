@@ -5,7 +5,9 @@ const Accordion = ({ accordionItems }: AccordionPropsType) => {
   return (
     <div className="accordion__container w-full">
       {accordionItems &&
-        accordionItems.map((item, index) => <AccordionItem key={index} data={item} />)}
+        accordionItems.map(
+          (item, index) => item.visible && <AccordionItem key={index} data={item} />
+        )}
     </div>
   );
 };

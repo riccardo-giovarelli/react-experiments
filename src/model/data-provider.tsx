@@ -1,4 +1,4 @@
-import { AccordionItemType } from "../interfaces/interface-accordion";
+import { AccordionItemExtType } from "../interfaces/interface-accordion";
 
 /**
  * @function getAccordionItems
@@ -6,7 +6,7 @@ import { AccordionItemType } from "../interfaces/interface-accordion";
  * @description Return a set of accordion items
  * @returns {AccordionItems} Accordion items
  */
-export const getAccordionItems = (): Array<AccordionItemType> => [
+export const getAccordionItems = (): Array<AccordionItemExtType> => [
   {
     title: "chuck norris facts",
     children: (
@@ -24,6 +24,7 @@ export const getAccordionItems = (): Array<AccordionItemType> => [
         <li>If you want a list of Chuck Norris' enemies, just check the extinct species list.</li>
       </ul>
     ),
+    visible: true,
   },
   {
     title: "bologna",
@@ -37,6 +38,7 @@ export const getAccordionItems = (): Array<AccordionItemType> => [
         d'Italia.
       </p>
     ),
+    visible: true,
   },
   {
     title: "lorem ipsum dolor sit amet",
@@ -114,5 +116,6 @@ export const getAccordionItems = (): Array<AccordionItemType> => [
         condimentum at enim.
       </p>
     ),
+    visible: true,
   },
 ];
