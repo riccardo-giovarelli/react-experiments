@@ -9,6 +9,10 @@ export interface AccordionItemType {
   readonly children: ReactNode;
 }
 
+/**
+ * @interface AccordionItemExtType
+ * @description Interface for ACCORDION ITEM (extended)
+ */
 export interface AccordionItemExtType extends AccordionItemType {
   visible: boolean;
 }
@@ -26,6 +30,6 @@ export interface AccordionPropsType {
  * @description Interface for the PROPS OF THE ACCORDION ITEMS COMPONENT
  */
 export interface AccordionItemPropsType {
-  data: AccordionItemType;
+  data: AccordionItemExtType;
   defaultStatus?: boolean;
 }

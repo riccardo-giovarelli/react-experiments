@@ -1,10 +1,10 @@
-import { AccordionItemExtType } from "../interfaces/interface-accordion";
+import { AccordionItemExtType } from "../types/types-accordion";
 
 /**
  * @function getAccordionItems
  *
  * @description Return a set of accordion items
- * @returns {AccordionItems} Accordion items
+ * @returns {Array<AccordionItemExtType>} Accordion items
  */
 export const getAccordionItems = (): Array<AccordionItemExtType> => [
   {

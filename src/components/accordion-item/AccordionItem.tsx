@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AccordionItemPropsType } from "../../interfaces/interface-accordion";
+import { AccordionItemPropsType } from "../../types/types-accordion";
 import { capitalizeAllWords } from "./lib";
 import "./AccordionItem.scss";
 

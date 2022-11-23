@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { DropdownProps } from "../../interfaces/interface-dropdown";
+import { DropdownProps } from "../../types/types-dropdown";
 
 const Dropdown = ({ items, selected, setItems }: DropdownProps) => {
   return (
