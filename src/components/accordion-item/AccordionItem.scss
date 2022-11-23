@@ -2,6 +2,11 @@
 $startDegree: 0deg;
 $endDegree: $startDegree + 180deg;
 
+// Interpolation
+@mixin rotate-button($degree) {
+  transform: rotate($degree);
+}
+
 // Style
 .accordionitem__container {
   .accordionitem__header {
@@ -15,10 +20,10 @@ $endDegree: $startDegree + 180deg;
         font-size: 30px;
 
         &--open {
-          transform: rotate($startDegree);
+          @include rotate-button($startDegree);
         }
         &--close {
-          transform: rotate($endDegree);
+          @include rotate-button($endDegree);
         }
       }
     }
